@@ -1,0 +1,35 @@
+SOME NOTES RELATED TO C++ (NOT TIED TO A SPECIFIC TOPIC)
+
+The return value of printf is integer. This integer represents the number of characters successfully printed to the standard output stream, excluding the null terminator used to end strings.
+
+-------------------------------------------------------------------
+// some links to study
+1) C input buffer flushing idiom explained:
+https://gemini.google.com/share/35046076d93e
+
+2) Some important points regarding floating-point types:
+https://gemini.google.com/share/607fdb17f3e4
+
+3) Casting and type definitions:
+https://gemini.google.com/share/53b576b21b9c
+
+4) sizeof operator in C89 vs C99 and size_t:
+For simple explanation:
+https://gemini.google.com/share/7dc7fe85a766
+For long continued discussion on size_t also:
+https://gemini.google.com/share/3997670994e0
+
+5) Constants in C:
+https://gemini.google.com/share/fad138338a19
+
+6) time, srand and rand functions in C:
+https://gemini.google.com/share/528ab1eae229
+
+7) sizeof(a) / sizeof(a[0]) vs sizeof(a) / sizeof(t), t is the type of a's elements
+https://gemini.google.com/share/aa3f4c1d7287
+
+8) 2D Array Out-of-Bounds Behavior Explained
+https://gemini.google.com/share/3d6d5e053152
+
+9) Pointer doubts, the last 3 prompts' answers are more important:
+https://gemini.google.com/share/a7e6008d4fa2
