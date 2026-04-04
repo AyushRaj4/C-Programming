@@ -33,3 +33,6 @@ https://gemini.google.com/share/3d6d5e053152
 
 9) Pointer doubts, the last 3 prompts' answers are more important:
 https://gemini.google.com/share/a7e6008d4fa2
+
+10) string literals vs string variables
+https://gemini.google.com/share/21335b3308f6
