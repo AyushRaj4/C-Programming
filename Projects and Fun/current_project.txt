@@ -1,0 +1,29 @@
+The Problem with realloc
+Your rawdb works perfectly, but think about the hardware. If your database grows to 10 million records and hits capacity, realloc has to find a brand new, contiguous block of RAM large enough to hold 20 million records, and then painstakingly copy all 10 million old records over to the new space. It is incredibly slow.
+
+The solution is to stop asking for contiguous blocks of memory.
+
+Phase 3 Project 1: The Process Queue (rawproc)
+You are going to build a Linked List. This is the foundation of almost every advanced system in computer science. Instead of putting all your data in one big array, you will scatter your records wherever there is free space in RAM, and physically wire them together using pointers.
+
+We will build an interactive Task Manager simulator (similar to the Linux top or ps commands) to manage a queue of running programs.
+
+The Architecture Steps
+The Node Blueprint: You need a struct Process that holds an integer pid (Process ID), a string name, and crucially, a pointer to the next struct Process. This pointer is the physical wire connecting the scattered memory.
+
+The Head Pointer: Instead of a database array, your main function will only hold a single pointer called head, which points to the very first process in the chain. If the queue is empty, head is NULL.
+
+The Commands:
+
+SPAWN <name>: malloc exactly one new node, give it a PID, and wire it into the chain.
+
+LIST: Start at head and use a while loop to jump from pointer to pointer, printing each process until you hit NULL.
+
+KILL <pid>: Search the chain for the specific PID. Unwire it from the chain by connecting the process before it directly to the process after it, and then free the deleted node.
+
+The K.N. King Chapter Map
+This is where the syntax gets slightly abstract because you are dealing with pointers pointing to structures that contain pointers.
+
+Chapter 17.5 (Linked Lists): This is the core reading. It will show you the exact syntax for defining the self-referential struct and how to jump between nodes using the -> operator.
+
+Because you enjoy the implementation and logic-figuring phase over passive reading, I won't spoil the code structure. But before you write the SPAWN command, you have an architectural decision to make: when a new process is spawned, do you want to attach the new memory block to the very beginning of the chain (the head) or loop all the way to the end and attach it to the tail?o start your first focused session tomorrow, do you want to begin by designing the struct blueprint in Chapter 16, or do you want to dive straight into Chapter 17 to see how malloc pulls memory out of thin air?

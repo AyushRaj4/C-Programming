@@ -1,0 +1,11 @@
+# 1. Ignore absolutely everything by default (this catches all extension-less binaries)
+*
+
+# 2. Un-ignore all directories (so Git can actually look inside your folders)
+!*/
+
+# 3. Un-ignore all files that have an extension (keeps .c, .txt, .md, .h, etc.)
+!*.*
+
+# 4. Un-ignore specific extension-less files that are actually useful
+!Makefile
