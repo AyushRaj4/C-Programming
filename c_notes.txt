@@ -36,3 +36,11 @@ https://gemini.google.com/share/a7e6008d4fa2
 
 10) string literals vs string variables
 https://gemini.google.com/share/21335b3308f6
+
+11) fread and fwrite mistakes to avoid
+https://gemini.google.com/share/9cf4bba54127
+
+Note:- There is buffer overread also apart from overflow, it just means reading the array beyond it's defined memory.
+
+12) struct important points
+https://gemini.google.com/share/42b29f450aac
